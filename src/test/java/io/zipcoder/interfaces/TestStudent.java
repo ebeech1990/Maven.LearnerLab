@@ -7,21 +7,21 @@ public class TestStudent {
 
     @Test
     public void testImplementation(){
-        Learner student = (Learner) (Object)new Student("bill");
+        Learner student = new Student(0,"bill");
 
         Assert.assertTrue(student instanceof Learner);
     }
 
     @Test
     public void testInheritance(){
-        Person student = (Person) (Object)new Student("bill");
+        Person student = new Student(0,"bill");
 
         Assert.assertTrue(student instanceof Person);
     }
 
     @Test
     public void testLearn(){
-        Student student = new Student("bill");
+        Student student = new Student(0,"bill");
         Double beforeStudy = student.getTotalStudyTime();
         student.learn(5.0);
         Double afterStudy = student.getTotalStudyTime();

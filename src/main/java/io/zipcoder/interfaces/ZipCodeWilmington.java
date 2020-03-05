@@ -20,11 +20,11 @@ public class ZipCodeWilmington extends People {
 
     public  void hostLecture(Teacher teacher, Double numberOfHours){
 
-        teacher.lecture((Learner[]) studentsInstance.toArray(),numberOfHours);
+        teacher.lecture(studentsInstance.toArray(),numberOfHours);
     }
 
     public  void hostLecture(long id, Double numberOfHours){
-        ((Teacher)instructorsInstance.findById(id)).lecture((Learner[]) studentsInstance.toArray(),numberOfHours);
+        (instructorsInstance.findById(id)).lecture( studentsInstance.toArray(),numberOfHours);
     }
 
     public  Map<Student,Double> getStudyMap(){
@@ -36,4 +36,7 @@ public class ZipCodeWilmington extends People {
         return newMap;
     }
 
+    public Person[] toArray() {
+        return new Person[0];
+    }
 }

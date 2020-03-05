@@ -7,7 +7,7 @@ public class TestPerson {
 
     @Test
     public void testConstructor(){
-        Person p = new Person("Emma");
+        Person p = new Person(5,"Emma");
 
         String actualName = p.getName();
         long actualId = p.getId();

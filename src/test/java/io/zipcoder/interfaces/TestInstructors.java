@@ -9,9 +9,9 @@ public class TestInstructors {
     @Test
     public void test(){
         staff = Instructors.getInstance();
-        staff.add(new Instructor("james"));
-        staff.add(new Instructor("sam"));
-        staff.add(new Instructor("fred"));
+        staff.add(new Instructor(0,"james"));
+        staff.add(new Instructor(1,"sam"));
+        staff.add(new Instructor(2,"fred"));
         int expected = 3;
         int actual = staff.count();
         Assert.assertEquals(expected, actual);

@@ -6,8 +6,8 @@ public class Student extends Person implements Learner {
 
 
 
-public Student(String name) {
-    super(name);
+public Student(long id,String name) {
+    super(id,name);
     totalStudyTime = 0.0;
 }
 

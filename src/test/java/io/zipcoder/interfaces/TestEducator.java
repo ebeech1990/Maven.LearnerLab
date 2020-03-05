@@ -3,15 +3,14 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestInstructor {
+public class TestEducator {
 
     @Test
     public void testImplementation(){
-        Teacher instructor = new Instructor(0,"james");
+        Educator leslie = Educator.LESLIE;
 
-        Assert.assertTrue(instructor instanceof Teacher);
+        Assert.assertTrue(leslie instanceof Teacher);
     }
-
     @Test
     public void testInheritance(){
         Person instructor = new Student(1,"bill");
@@ -22,8 +21,8 @@ public class TestInstructor {
     @Test
     public void testTeach(){
         Student student = new Student(1,"bill");
-        Instructor instructor = new Instructor(0,"james");
-        instructor.teach(student,4.0);
+        Educator april = Educator.APRIL;
+        april.teach(student,4.0);
         Double actual = student.getTotalStudyTime();
         Double expected = 4.0;
 
@@ -36,8 +35,8 @@ public class TestInstructor {
         Student bob = new Student(2,"bob");
         Learner[] learners = new Learner[]{bill,bob};
 
-        Instructor instructor = new Instructor(0,"james");
-        instructor.lecture(learners,6.0);
+        Educator ron = Educator.RON;
+        ron.lecture(learners,6.0);
         Double actualBill = bill.getTotalStudyTime();
         Double expectedBill = 3.0;
         Assert.assertEquals(expectedBill, actualBill);
